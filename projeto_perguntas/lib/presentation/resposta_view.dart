@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import '../model/resposta.dart';
 
-class Resposta extends StatelessWidget{
+class RespostaView extends StatelessWidget{
+
 final String texto;
 final void Function() quandoSelecionado;
 
-Resposta(this.texto, this.quandoSelecionado);
+ const RespostaView(this.texto, this.quandoSelecionado);
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +16,10 @@ Resposta(this.texto, this.quandoSelecionado);
     width: double.infinity,
      child: ElevatedButton(  
       child: Text(texto),
-      onPressed: quandoSelecionado,
+      onPressed: (){},
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.green,
-        textStyle: TextStyle(
+        textStyle: const TextStyle(
           color: Colors.red,
         )
       ),
